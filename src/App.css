@@ -1,88 +1,249 @@
+:root {
+  --primary-bg: #121212;
+  --card-bg: #1e1e2f;
+  --accent: #007bff;
+  --accent-hover: #0056b3;
+  --text: #f0f0f0;
+  --muted: #aaaaaa;
+  --recommend: #00ff88;
+}
+
+/* Base */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f3f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--primary-bg);
   margin: 0;
   padding: 0;
+  color: var(--text);
+}
+body, .container {
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
 }
 
+/* Container */
 .container {
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
-  background: white;
-  margin-top: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-.title {
+/* Headings */
+h1, h2, h3 {
   text-align: center;
-  margin-bottom: 25px;
+  color: var(--accent);
 }
 
+/* Navbar */
+.navbar {
+  background-color: var(--accent);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Questions */
 .question-block {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .label {
   display: block;
-  margin-bottom: 5px;
   font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--text);
 }
 
+/* Select / Inputs */
 .select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   font-size: 16px;
+  background-color: #2a2a3a;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
 }
 
+/* Button */
 .button {
   display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
+  margin: 30px auto 10px;
+  padding: 12px 28px;
   font-size: 18px;
-  background-color: #007bff;
+  background-color: var(--accent);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Table */
+table, .comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #222;
+  color: var(--text);
+  font-size: 15px;
+}
+
+th, td, .comparison-table th, .comparison-table td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: center;
+  color: #000;
+}
+
+th, .comparison-table th {
+  background-color: var(--accent);
+  color: rgb(0, 0, 0);
+}
+p {
+  color: black;
+}
+
+/* Recommendation Text */
+.recommendation {
+  font-size: 22px;
+  color: var(--recommend);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.emoji-flag {
+  font-size: 2rem;
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+}
+
+
+/* Flag */
+.flag-icon, .emoji-flag {
+  font-size: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.country-card .emoji-flag {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Country Option (dropdown-style) */
+.country-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #2a2a3a;
+  color: var(--text);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  transition: background 0.2s ease;
+}
+
+.country-option:hover {
+  background-color: #34344a;
   cursor: pointer;
 }
 
-.results {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.recommendation {
+/* Card View Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: green;
+  justify-content: center;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 12px;
+.country-card {
+  background-color: #2a2a3a;
+  border: 1px solid #444;
+  padding: 15px;
+  width: 45%;
+  border-radius: 10px;
   text-align: center;
 }
 
-th {
-  background-color: #007bff;
-  color: white;
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
 }
 
-.country-details {
-  margin-top: 40px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.country-details h2 {
-  margin-bottom: 15px;
-  color: #333;
-  text-align: center;
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .comparison-table th, .comparison-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .country-card {
+    width: 100%;
+  }
 }

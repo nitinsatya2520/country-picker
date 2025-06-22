@@ -1,0 +1,235 @@
+/* Global container */
+.container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f0f2d, #1a1a40);
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glowing title */
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #bb86fc, 0 0 20px #03dac6;
+}
+
+/* Question box */
+.question-block {
+  margin-bottom: 1.8rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Select dropdown */
+.select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #23234a;
+  color: #ffffff;
+  border: 1px solid #444;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.select:focus {
+  border-color: #bb86fc;
+  box-shadow: 0 0 5px #bb86fc66;
+}
+
+/* Buttons */
+.button {
+  background: linear-gradient(135deg, #bb86fc, #03dac6);
+  color: #121212;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin: 1rem 0.5rem 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #bb86fcaa;
+}
+
+/* Table view */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  overflow-x: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #bb86fc;
+  font-size: 1rem;
+}
+
+.comparison-table td {
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #eee;
+}
+
+/* Country flag */
+.emoji-flag {
+  font-size: 1.4rem;
+}
+
+/* Card view */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.country-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 240px;
+  box-shadow: 0 0 15px #00000044;
+  text-align: center;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.country-card h3 {
+  margin-top: 0.8rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.country-card p {
+  font-size: 1rem;
+  color: #03dac6;
+  margin-top: 0.5rem;
+}
+
+/* Recommendation */
+.recommendation {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #03dac6;
+  font-weight: 600;
+  text-shadow: 0 0 8px #03dac688;
+}
+
+/* Highlighting table rows */
+tr.highlight {
+  background-color: rgba(187, 134, 252, 0.2) !important;
+  font-weight: bold;
+  border: 2px solid #bb86fc;
+}
+
+/* Score-based row colors */
+tr[data-score] {
+  transition: background-color 0.3s ease;
+}
+
+tr[data-score]:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-card {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .select {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.insight-box {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.05);
+  border-left: 5px solid #bb86fc;
+  color: #ddd;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(187,134,252,0.2);
+}
+
+.tip-banner {
+  color: #222;
+  background: #bb86fc;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  animation: slideIn 1s ease-in;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.score-bar {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+.score-bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #bb86fc, #6200ee);
+  border-radius: 5px;
+}

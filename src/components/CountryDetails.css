@@ -1,0 +1,180 @@
+/* Container */
+.container {
+  padding: 2.5rem;
+  background: radial-gradient(ellipse at top left, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.title {
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #bb86fc9f, 0 0 25px #03dac6;
+}
+
+/* Button */
+.button {
+  background: linear-gradient(135deg, #03dac6, #bb86fc);
+  color: #121212;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 12px #03dac6aa;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 18px #bb86fcaa;
+}
+
+/* Card View */
+.card-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.country-card {
+  width: 290px;
+  padding: 1.8rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: #1c1c1c; /* Dark text */
+}
+
+.country-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.country-card h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.country-card p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* Emoji Flag */
+.emoji-flag {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+/* Table View */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #1b1b1b;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison-table th {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #121212;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.comparison-table td {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Row PR Coloring */
+tr[style*="d4edda"] {
+  background-color: rgba(0, 77, 0, 0.15) !important; /* Greenish */
+}
+
+tr[style*="fff3cd"] {
+  background-color: rgba(102, 92, 0, 0.15) !important; /* Yellowish */
+}
+
+tr[style*="f8d7da"] {
+  background-color: rgba(74, 26, 26, 0.15) !important; /* Reddish */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-view {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-card {
+    width: 95%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .comparison-table th, .comparison-table td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+.tip-banner {
+  color: #222;
+  background: #bb86fc;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  animation: slideIn 1s ease-in;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
