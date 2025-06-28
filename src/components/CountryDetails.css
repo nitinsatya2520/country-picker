@@ -178,3 +178,57 @@ tr[style*="f8d7da"] {
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+
+
+
+
+
+/* Extra mobile responsiveness */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 0 6px #bb86fc88;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 40px;
+  }
+
+  .country-card {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 14px;
+  }
+
+  .country-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .country-card p {
+    font-size: 0.85rem;
+  }
+
+  .emoji-flag {
+    font-size: 1.8rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .tip-banner {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}

@@ -61,15 +61,24 @@ function Calculator() {
         <div key={q.key} className="question-block">
           <label className="label">{q.question}</label>
           <select
-            className="select"
-            value={answers[q.key] ?? ""}
-            onChange={(e) =>
-              handleChange(
-                q.key,
-                q.type === "boolean" ? e.target.value === "yes" : e.target.value
-              )
-            }
-          >
+  className="select"
+  value={
+    q.type === "boolean"
+      ? answers[q.key] === true
+        ? "yes"
+        : answers[q.key] === false
+        ? "no"
+        : ""
+      : answers[q.key] ?? ""
+  }
+  onChange={(e) =>
+    handleChange(
+      q.key,
+      q.type === "boolean" ? e.target.value === "yes" : e.target.value
+    )
+  }
+>
+
             <option value="">Select</option>
             {q.type === "boolean" ? (
               <>

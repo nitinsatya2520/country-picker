@@ -79,6 +79,21 @@ export const questions = [
     },
   },
   {
+    question: "Which type of student are you?",
+    key: "studentType",
+    type: "select",
+    options: ["Below Average", "Average", "Top Student"],
+    weights: {
+      DE: [0, 1, 2],
+      AU: [1, 2, 3],
+      US: [1, 2, 4],
+      CA: [1, 2, 3],
+      UK: [1, 2, 3],
+      IE: [1, 2, 3],
+      NZ: [1, 2, 3],
+    },
+  },
+  {
     question: "Can you speak or are willing to learn German?",
     key: "german",
     type: "boolean",
@@ -170,6 +185,60 @@ export const questions = [
       UK: [0, 2, 4],
       IE: [0, 2, 4],
       NZ: [0, 2, 4],
+    },
+  },
+  {
+    question: "Do you prefer a cold or warm climate?",
+    key: "climate",
+    type: "select",
+    options: ["Cold", "Moderate", "Warm"],
+    weights: {
+      DE: [1, 2, 0],
+      AU: [0, 2, 3],
+      US: [1, 2, 2],
+      CA: [3, 2, 0],
+      UK: [2, 2, 1],
+      IE: [2, 2, 1],
+      NZ: [1, 2, 2],
+    },
+  },
+  {
+    question: "How important is low tuition/affordable education for you?",
+    key: "lowtuition",
+    type: "select",
+    options: ["Not Important", "Somewhat Important", "Very Important"],
+    weights: {
+      DE: [0, 2, 4],
+      AU: [1, 2, 3],
+      US: [0, 1, 2],
+      CA: [1, 2, 3],
+      UK: [0, 1, 2],
+      IE: [1, 2, 3],
+      NZ: [1, 2, 3],
+    },
+  },
+  {
+    question: "Are you looking for a strong Indian student community abroad?",
+    key: "indians",
+    type: "boolean",
+    weights: {
+      DE: 2, AU: 3, US: 3, CA: 3, UK: 3, IE: 2, NZ: 2,
+    },
+  },
+  {
+    question: "Do you want your degree to have global job opportunities?",
+    key: "globaldegree",
+    type: "boolean",
+    weights: {
+      DE: 2, AU: 3, US: 4, CA: 3, UK: 4, IE: 3, NZ: 3,
+    },
+  },
+  {
+    question: "Are you looking for research opportunities (MS/PhD level)?",
+    key: "research",
+    type: "boolean",
+    weights: {
+      DE: 4, AU: 3, US: 4, CA: 3, UK: 3, IE: 2, NZ: 2,
     },
   },
 ];
