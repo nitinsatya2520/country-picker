@@ -8,7 +8,8 @@ function Home() {
     <div>
       
     <div className="container fade-in home-wrapper">
-      <h1 className="home-title">🌍 Welcome to Country Advisor</h1>
+      <h1 className="home-title">
+        <img src="/logo192.png" alt="Logo" className="log-img" /> Welcome to Country Advisor</h1>
       
       <p className="home-description">
         Thinking of studying abroad? <strong>Country Advisor</strong> is your smart companion to compare countries, tuition fees, job prospects, PR options, and much more.

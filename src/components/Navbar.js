@@ -24,8 +24,10 @@ function Navbar() {
   return (
     <nav className="navbar" ref={navRef}>
       <Link to="/" className="logo" onClick={closeMenu}>
-        🌍 Country Advisor
-      </Link>
+  <img src="/logo192.png" alt="Logo" className="logo-img" />
+  <span className="logo-text">Country Advisor</span>
+</Link>
+
 
       <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
         <span></span>

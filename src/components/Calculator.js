@@ -55,7 +55,8 @@ function Calculator() {
     <div className="container">
         
 
-      <h1 className="title">🌍 Country Pick Calculator</h1>
+      <h1 className="title">
+         <img src="/logo192.png" alt="Logo" className="log-img" /> Country Pick Calculator</h1>
 
       {questions.map((q) => (
         <div key={q.key} className="question-block">

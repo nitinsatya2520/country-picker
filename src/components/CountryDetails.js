@@ -17,7 +17,8 @@ function CountryDetails() {
   return (
     <div className="container fade-in">
         
-      <h2 className="title">🌐 Country Comparison Details</h2>
+      <h2 className="title">
+         <img src="/logo192.png" alt="Logo" className="log-img" /> Country Comparison Details</h2>
 
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <button className="button" onClick={() => setIsCardView(!isCardView)}>

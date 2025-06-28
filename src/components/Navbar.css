@@ -36,6 +36,28 @@
   gap: 1.5rem;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 5px;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* or your theme color */
+}
+
+
 .nav-links a {
   color: #e0e0e0;
   text-decoration: none;
