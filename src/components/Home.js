@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css"; // optional if you're adding styles separately
+import { motion } from "framer-motion";
 
 
 function Home() {
@@ -15,29 +16,30 @@ function Home() {
         Thinking of studying abroad? <strong>Country Advisor</strong> is your smart companion to compare countries, tuition fees, job prospects, PR options, and much more.
       </p>
 
-      <section className="info-section">
-        <h2>🎓 Why Study Abroad?</h2>
-        <ul>
-          <li><strong>Global Exposure:</strong> Experience new cultures, languages, and global perspectives.</li>
-          <li><strong>High-Quality Education:</strong> Learn from top universities and internationally recognized faculty.</li>
-          <li><strong>Career Opportunities:</strong> Build a career in high-demand sectors worldwide.</li>
-          <li><strong>PR Pathways:</strong> Many countries offer pathways to permanent residency after graduation.</li>
-        </ul>
-      </section>
+       <div className="start-here-banner">🧭 Not sure where to begin? Try our calculator to get personalized suggestions!</div>
 
-      <section className="info-section">
-        <h2>📌 What You Can Do Here</h2>
-        <ul>
-          <li>🎯 Use the <strong>Country Recommendation Tool</strong> to find the best fit for your goals.</li>
-          <li>📊 Compare countries based on tuition, job opportunities, cost of living, PR ease, and more.</li>
-          <li>🧮 Consider your background, preferences, and financial status to make an informed decision.</li>
-        </ul>
-      </section>
-      
-      
-      <section className="spotlights">
-  <h2>🌟 Popular Country Spotlights</h2>
-  <div className="country-cards">
+        <motion.section className="info-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <h2>🎓 Why Study Abroad?</h2>
+          <ul>
+            <li><strong>Global Exposure:</strong> Experience new cultures, languages, and global perspectives.</li>
+            <li><strong>High-Quality Education:</strong> Learn from top universities and internationally recognized faculty.</li>
+            <li><strong>Career Opportunities:</strong> Build a career in high-demand sectors worldwide.</li>
+            <li><strong>PR Pathways:</strong> Many countries offer pathways to permanent residency after graduation.</li>
+          </ul>
+        </motion.section>
+
+        <motion.section className="info-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+          <h2>📌 What You Can Do Here</h2>
+          <ul>
+            <li>🎯 Use the <strong>Country Recommendation Tool</strong> to find the best fit for your goals.</li>
+            <li>📊 Compare countries based on tuition, job opportunities, cost of living, PR ease, and more.</li>
+            <li>🧮 Consider your background, preferences, and financial status to make an informed decision.</li>
+          </ul>
+        </motion.section>
+
+        <motion.section className="spotlights" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
+          <h2>🌟 Popular Country Spotlights</h2>
+          <div className="country-cards">
 
     <div className="country-card">
       <h3>🇨🇦 Canada</h3>
@@ -117,21 +119,51 @@ function Home() {
 
     
 
-  </div><li> INR Conversion Rates Used (approx, June 2025)</li>
-</section>
+  </div>
+          <p className="rate-disclaimer">ℹ️ INR Conversion Rates as of <strong>June 2025</strong> — actual values may vary.</p>
+        </motion.section>
 
+        <motion.section className="trends-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
+          <h2>📈 Trends & Updates</h2>
+          <ul>
+            <li>🇨🇦 Canada recently lowered PR points threshold for graduates.</li>
+            <li>🇦🇺 Australia increased minimum funds requirement for visa in 2025.</li>
+            <li>🇩🇪 Germany streamlining visa process for STEM students.</li>
+          </ul>
+        </motion.section>
 
+        <motion.section className="testimonials" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+          <h2>💬 What Students Say</h2>
+          <blockquote>"Thanks to Country Advisor, I found the perfect country to study AI!" – Priya, India</blockquote>
+          <blockquote>"The comparison tool made my decision so easy!" – John, Nigeria</blockquote>
+        </motion.section>
 
+        <motion.section className="video-section" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
+          <h2>🎥 Quick Intro</h2>
+<div className="video-wrapper">
+  <iframe 
+    width="100%" 
+    height="315" 
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+    title="Intro Video" 
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowFullScreen
+  ></iframe>
+</div>
+        </motion.section>
 
-      <div className="action-buttons">
-        <Link to="/calculator" className="button">🎯 Get a Recommendation</Link>
-        <Link to="/details" className="button secondary">📊 Explore Country Info</Link>
+        <div className="action-buttons">
+          <Link to="/calculator" className="button">🎯 Get a Recommendation</Link>
+          <Link to="/details" className="button secondary">📊 Explore Country Info</Link>
+          <Link to="/details" className="button tertiary">🌐 View All Countries</Link>
+        </div>
+
+        <footer className="home-footer">
+          <p>🚀 Start your journey toward global education and a better future!</p>
+        </footer>
       </div>
-
-      <footer className="home-footer">
-        <p>🚀 Start your journey toward global education and a better future!</p>
-      </footer>
-    </div></div>
+    </div>
   );
 }
 
